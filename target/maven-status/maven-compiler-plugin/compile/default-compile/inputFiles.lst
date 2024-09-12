@@ -1,0 +1,9 @@
+c:\Users\Jac01\OneDrive\Documents\GitHub\mssc-beer-inventory-service\src\main\java\guru\sfg\beer\inventory\service\BeerInventoryApplication.java
+c:\Users\Jac01\OneDrive\Documents\GitHub\mssc-beer-inventory-service\src\main\java\guru\sfg\beer\inventory\service\domain\BaseEntity.java
+c:\Users\Jac01\OneDrive\Documents\GitHub\mssc-beer-inventory-service\src\main\java\guru\sfg\beer\inventory\service\web\model\BeerInventoryDto.java
+c:\Users\Jac01\OneDrive\Documents\GitHub\mssc-beer-inventory-service\src\main\java\guru\sfg\beer\inventory\service\web\mappers\DateMapper.java
+c:\Users\Jac01\OneDrive\Documents\GitHub\mssc-beer-inventory-service\src\main\java\guru\sfg\beer\inventory\service\web\controllers\BeerInventoryController.java
+c:\Users\Jac01\OneDrive\Documents\GitHub\mssc-beer-inventory-service\src\main\java\guru\sfg\beer\inventory\service\bootstrap\BeerInvntoryBootstrap.java
+c:\Users\Jac01\OneDrive\Documents\GitHub\mssc-beer-inventory-service\src\main\java\guru\sfg\beer\inventory\service\repositories\BeerInventoryRepository.java
+c:\Users\Jac01\OneDrive\Documents\GitHub\mssc-beer-inventory-service\src\main\java\guru\sfg\beer\inventory\service\domain\BeerInventory.java
+c:\Users\Jac01\OneDrive\Documents\GitHub\mssc-beer-inventory-service\src\main\java\guru\sfg\beer\inventory\service\web\mappers\BeerInventoryMapper.java
