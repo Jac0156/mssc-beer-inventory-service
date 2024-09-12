@@ -16,17 +16,20 @@
  */
 package guru.sfg.beer.inventory.service.domain;
 
+import java.sql.Timestamp;
+import java.util.UUID;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.Version;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Type;
-import org.hibernate.annotations.UpdateTimestamp;
-
-import javax.persistence.*;
-import java.sql.Timestamp;
-import java.util.UUID;
 
 /**
  * Created by jt on 2019-01-26.
@@ -37,7 +40,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @MappedSuperclass
 public class BaseEntity {
-
+   
     public BaseEntity(UUID id, Long version, Timestamp createdDate, Timestamp lastModifiedDate) {
         this.id = id;
         this.version = version;
@@ -47,11 +50,11 @@ public class BaseEntity {
 
     @Id
     @GeneratedValue(generator = "UUID")
-    @GenericGenerator(
+/*     @GenericGenerator(
             name = "UUID",
             strategy = "org.hibernate.id.UUIDGenerator"
-    )
-    @Type(type="org.hibernate.type.UUIDCharType")
+    ) 
+    @Type(type="org.hibernate.type.UUIDCharType")*/
     @Column(length = 36, columnDefinition = "varchar", updatable = false, nullable = false )
     private UUID id;
 

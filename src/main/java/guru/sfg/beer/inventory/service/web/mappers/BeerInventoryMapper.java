@@ -1,8 +1,10 @@
 package guru.sfg.beer.inventory.service.web.mappers;
 
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+
 import guru.sfg.beer.inventory.service.domain.BeerInventory;
 import guru.sfg.beer.inventory.service.web.model.BeerInventoryDto;
-import org.mapstruct.Mapper;
 
 /**
  * Created by jt on 2019-05-31.
@@ -10,7 +12,8 @@ import org.mapstruct.Mapper;
 @Mapper(uses = {DateMapper.class})
 public interface BeerInventoryMapper {
 
+    @Mapping(target = "Version", ignore = true)
     BeerInventory beerInventoryDtoToBeerInventory(BeerInventoryDto beerInventoryDTO);
-
+    
     BeerInventoryDto beerInventoryToBeerInventoryDto(BeerInventory beerInventory);
 }
