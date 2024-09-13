@@ -10,7 +10,7 @@ import guru.sfg.beer.inventory.service.web.model.BeerInventoryDto;
  * Created by jt on 2019-05-31.
  */
 @Mapper(uses = {DateMapper.class})
-public interface BeerInventoryMapper {
+public interface BeerInventoryMapper { 
 
     @Mapping(target = "version", ignore = true )
     BeerInventory beerInventoryDtoToBeerInventory(BeerInventoryDto beerInventoryDTO);
