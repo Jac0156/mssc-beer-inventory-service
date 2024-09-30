@@ -1,17 +1,15 @@
 package guru.sfg.beer.inventory.service.web.mappers;
 
+import guru.sfg.beer.inventory.service.domain.BeerInventory;
+import guru.sfg.beer.inventory.service.web.model.BeerInventoryDto;
 import javax.annotation.processing.Generated;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import guru.sfg.beer.inventory.service.domain.BeerInventory;
-import guru.sfg.beer.inventory.service.web.model.BeerInventoryDto;
-
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-09-25T22:12:37-0400",
-    comments = "version: 1.6.0, compiler: javac, environment: Java 21.0.4 (Eclipse Adoptium)"
+    date = "2024-09-30T16:22:48-0400",
+    comments = "version: 1.6.0, compiler: Eclipse JDT (IDE) 3.40.0.v20240919-1711, environment: Java 17.0.12 (Eclipse Adoptium)"
 )
 @Component
 public class BeerInventoryMapperImpl implements BeerInventoryMapper {
@@ -27,12 +25,12 @@ public class BeerInventoryMapperImpl implements BeerInventoryMapper {
 
         BeerInventory.BeerInventoryBuilder beerInventory = BeerInventory.builder();
 
-        beerInventory.id( beerInventoryDTO.getId() );
-        beerInventory.createdDate( dateMapper.asTimestamp( beerInventoryDTO.getCreatedDate() ) );
-        beerInventory.lastModifiedDate( dateMapper.asTimestamp( beerInventoryDTO.getLastModifiedDate() ) );
         beerInventory.beerId( beerInventoryDTO.getBeerId() );
-        beerInventory.upc( beerInventoryDTO.getUpc() );
+        beerInventory.createdDate( dateMapper.asTimestamp( beerInventoryDTO.getCreatedDate() ) );
+        beerInventory.id( beerInventoryDTO.getId() );
+        beerInventory.lastModifiedDate( dateMapper.asTimestamp( beerInventoryDTO.getLastModifiedDate() ) );
         beerInventory.quantityOnHand( beerInventoryDTO.getQuantityOnHand() );
+        beerInventory.upc( beerInventoryDTO.getUpc() );
 
         return beerInventory.build();
     }
@@ -45,12 +43,12 @@ public class BeerInventoryMapperImpl implements BeerInventoryMapper {
 
         BeerInventoryDto.BeerInventoryDtoBuilder beerInventoryDto = BeerInventoryDto.builder();
 
-        beerInventoryDto.id( beerInventory.getId() );
-        beerInventoryDto.createdDate( dateMapper.asOffsetDateTime( beerInventory.getCreatedDate() ) );
-        beerInventoryDto.lastModifiedDate( dateMapper.asOffsetDateTime( beerInventory.getLastModifiedDate() ) );
         beerInventoryDto.beerId( beerInventory.getBeerId() );
-        beerInventoryDto.upc( beerInventory.getUpc() );
+        beerInventoryDto.createdDate( dateMapper.asOffsetDateTime( beerInventory.getCreatedDate() ) );
+        beerInventoryDto.id( beerInventory.getId() );
+        beerInventoryDto.lastModifiedDate( dateMapper.asOffsetDateTime( beerInventory.getLastModifiedDate() ) );
         beerInventoryDto.quantityOnHand( beerInventory.getQuantityOnHand() );
+        beerInventoryDto.upc( beerInventory.getUpc() );
 
         return beerInventoryDto.build();
     }
