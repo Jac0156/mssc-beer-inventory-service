@@ -1,4 +1,4 @@
-package guru.sfg.common.events;
+package guru.sfg.brewery.model.events;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -44,7 +44,7 @@ public class BeerDto implements Serializable {
     private String beerName;
 
     @NotNull
-    private BeerStyleEnum beerStyle;
+    private String beerStyle;
 
     @NotNull
     private String upc;
